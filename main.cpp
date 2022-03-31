@@ -1,3 +1,6 @@
+//Construcción del archivo HTML. Indica la ejecución del resto de archivos en el punto medio para 
+//llenarlo con el texto proveido en test.txt.
+
 #include "FlexLexer.h"
 #include <bits/stdc++.h>
 
@@ -14,9 +17,10 @@ void htmlBuilder() {
         myfile << "\t<meta charset=\"UTF-8\">" << endl;
         myfile << "\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">" << endl;
         myfile << "\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">" << endl;
-        myfile << "\t<title>Document</title>" << endl;
+        myfile << "\t<title>Highlighted Text</title>" << endl;
+        myfile << "<link rel=\"icon\" href=\"https://upload.wikimedia.org/wikipedia/commons/b/b0/Light_green_check.svg\">" << endl;
         myfile << "</head>" << endl;
-        myfile << "<body>" << endl;
+        myfile << "<body>" << endl; 
     }
 
     myfile.close();

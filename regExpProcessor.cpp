@@ -1,3 +1,6 @@
+//Lectura, asignación de colores y escritura de expresiones regulares a lexico.l
+
+
 #include <bits/stdc++.h>
 
 #include <stdio.h>
@@ -6,11 +9,12 @@
 
 using namespace std;
 
+//asignación de colores
 vector<tuple<string, string>> colorRegExp(vector<string> outRegExps) {
     vector<tuple<string, string>> colorRegExp;
     vector<string> colors {"burlywood", "crimson", "blue", "fuchsia", 
-                            "green", "slateblue", "blueviolet", "coral", "deepskyblue", 
-                            "indigo", "maroon", "tomato"};
+                            "green", "red", "blueviolet", "lime", "deepskyblue", 
+                            "indigo", "maroon", "tomato", "pink", "mediumvioletred", "dodgerblue"};
 
     for (int i = 0; i < outRegExps.size(); i++) {
         tuple<string, string> aux;
@@ -21,7 +25,7 @@ vector<tuple<string, string>> colorRegExp(vector<string> outRegExps) {
     return colorRegExp;
 }
 
-
+//lextura del archivo de expresiones regulares
 vector<string> readRegExps(string regExpFile) {
     ifstream myfile(regExpFile);
     string line;
@@ -38,7 +42,7 @@ vector<string> readRegExps(string regExpFile) {
     return outRegExps;
 }
 
-
+//escritura a lexico.l
 void writeRegExps(vector<tuple<string, string>> colorRegExp) {
     ofstream myfile;
     myfile.open("lexico.l");
